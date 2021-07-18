@@ -90,7 +90,7 @@ fetch('./DAG/DAG.json').then(response => response.json())
         nodelabels.on("click", (n) => {
             const pnImg = document.getElementById('pn-img');
             const pnImgTitle = document.getElementById('pn-img-title');
-            pnImg.src = `./reduction_results/png/${n.name}.png`;
+            pnImg.src = `./png/${n.name}.png`;
             pnImgTitle.innerText = n.name;
             pnImgTitle.style.backgroundColor = nodeColor(n);
 
@@ -151,42 +151,42 @@ fetch('./DAG/DAG.json').then(response => response.json())
 
         svg.append("circle")
             .attr("cx", w * (3 / 4))
-            .attr("cy", h - (h / 10))
+            .attr("cy", h - (h / 12))
             .attr("r", 6)
             .attr('class', 'legend-dot')
             .style("fill", '#BADA55');
 
         svg.append("text")
             .attr("x", w * (3 / 4) + 8)
-            .attr("y", h - (h / 10) + 3)
+            .attr("y", h - (h / 12) + 3)
             .text("root (input Petri net)")
             .style("font-size", "14px")
             .attr("alignment-baseline", "middle");
 
         svg.append("circle")
             .attr("cx", w * (3 / 4))
-            .attr("cy", h - (h / 10) + 20)
+            .attr("cy", h - (h / 12) + 20)
             .attr("r", 6)
             .attr('class', 'legend-dot')
             .style("fill", "#10ADED");
 
         svg.append("text")
             .attr("x", w * (3 / 4) + 8)
-            .attr("y", h - (h / 10) + 20 + 3)
+            .attr("y", h - (h / 12) + 20 + 3)
             .text("leaf node (T-net & P-net)")
             .style("font-size", "14px")
             .attr("alignment-baseline", "middle");
 
         svg.append("circle")
             .attr("cx", w * (3 / 4))
-            .attr("cy", h - (h / 10) + 40)
+            .attr("cy", h - (h / 12) + 40)
             .attr("r", 6)
             .attr('class', 'legend-dot')
             .style("fill", "pink");
 
         svg.append("text")
             .attr("x", w * (3 / 4) + 8)
-            .attr("y", h - (h / 10) + 40 + 3)
+            .attr("y", h - (h / 12) + 40 + 3)
             .text("other reduced Petri net")
             .style("font-size", "14px")
             .attr("alignment-baseline", "middle");
