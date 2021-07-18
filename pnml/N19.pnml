@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="n8">
+        <name>
+          <text>p8</text>
+        </name>
+        <graphics>
+          <position x="70.0" y="50.0"/>
+          <dimension x="10.0" y="10.0"/>
+        </graphics>
+      </place>
+      <place id="n7">
+        <name>
+          <text>p6</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+        <graphics>
+          <position x="40.0" y="55.0"/>
+          <dimension x="10.0" y="10.0"/>
+        </graphics>
+      </place>
+      <place id="n5">
+        <name>
+          <text>p1</text>
+        </name>
+        <graphics>
+          <position x="10.0" y="10.0"/>
+          <dimension x="10.0" y="10.0"/>
+        </graphics>
+      </place>
+      <transition id="n14">
+        <name>
+          <text>t7</text>
+        </name>
+        <graphics>
+          <position x="70.0" y="30.0"/>
+          <dimension x="10.0" y="10.0"/>
+        </graphics>
+      </transition>
+      <transition id="n10">
+        <name>
+          <text>t2</text>
+        </name>
+        <graphics>
+          <position x="25.0" y="50.0"/>
+          <dimension x="10.0" y="10.0"/>
+        </graphics>
+      </transition>
+      <transition id="n11">
+        <name>
+          <text>t6</text>
+        </name>
+        <graphics>
+          <position x="55.0" y="55.0"/>
+          <dimension x="10.0" y="10.0"/>
+        </graphics>
+      </transition>
+      <arc id="140328955288320" source="n5" target="n10"/>
+      <arc id="140328955288096" source="n7" target="n11"/>
+      <arc id="140328955287984" source="n10" target="n7"/>
+      <arc id="140328955285968" source="n8" target="n14"/>
+      <arc id="140328955287480" source="n11" target="n8"/>
+      <arc id="140328955286808" source="n14" target="n5"/>
+    </page>
+  </net>
+</pnml>

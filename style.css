@@ -1,0 +1,91 @@
+.nodelabel:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+
+nav {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  margin: auto;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+}
+
+a:link,
+a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+a:hover,
+a:active {
+  background-color: green;
+  color: white;
+}
+
+#pn-panel {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  align-items: center;
+  height: 100vh;
+}
+
+figure {
+  max-height: 45%;
+  width: fit-content;
+}
+
+figcaption {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+hr {
+  width: 90%;
+  color: #ebebeb;
+}
+
+.pn {
+  width: 100%;
+  max-height: 77%;
+}
+
+span {
+  background-color: #bada55;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  font: 12px sans-serif;
+  background: black;
+  border: 0px;
+  border-radius: 8px;
+  color: white;
+}
