@@ -54,12 +54,11 @@ a:active {
 figure {
   max-height: 45%;
   width: fit-content;
-  margin: 0;
 }
 
 figcaption {
   text-align: center;
-  margin: 20px 0px;
+  margin: 10px;
 }
 
 hr {
