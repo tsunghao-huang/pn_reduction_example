@@ -11,6 +11,15 @@
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </place>
+      <place id="n5">
+        <name>
+          <text>p1</text>
+        </name>
+        <graphics>
+          <position x="10.0" y="10.0"/>
+          <dimension x="10.0" y="10.0"/>
+        </graphics>
+      </place>
       <place id="n7">
         <name>
           <text>p6</text>
@@ -23,21 +32,12 @@
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </place>
-      <place id="n5">
+      <transition id="n11">
         <name>
-          <text>p1</text>
+          <text>t6</text>
         </name>
         <graphics>
-          <position x="10.0" y="10.0"/>
-          <dimension x="10.0" y="10.0"/>
-        </graphics>
-      </place>
-      <transition id="n14">
-        <name>
-          <text>t7</text>
-        </name>
-        <graphics>
-          <position x="70.0" y="30.0"/>
+          <position x="55.0" y="55.0"/>
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </transition>
@@ -50,21 +50,21 @@
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </transition>
-      <transition id="n11">
+      <transition id="n14">
         <name>
-          <text>t6</text>
+          <text>t7</text>
         </name>
         <graphics>
-          <position x="55.0" y="55.0"/>
+          <position x="70.0" y="30.0"/>
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </transition>
-      <arc id="140328955288320" source="n5" target="n10"/>
-      <arc id="140328955288096" source="n7" target="n11"/>
-      <arc id="140328955287984" source="n10" target="n7"/>
-      <arc id="140328955285968" source="n8" target="n14"/>
-      <arc id="140328955287480" source="n11" target="n8"/>
-      <arc id="140328955286808" source="n14" target="n5"/>
+      <arc id="140352226285664" source="n14" target="n5"/>
+      <arc id="140352226285944" source="n11" target="n8"/>
+      <arc id="140352226284488" source="n8" target="n14"/>
+      <arc id="140352226284264" source="n5" target="n10"/>
+      <arc id="140352226285552" source="n10" target="n7"/>
+      <arc id="140352226285720" source="n7" target="n11"/>
     </page>
   </net>
 </pnml>

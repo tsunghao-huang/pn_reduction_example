@@ -11,7 +11,7 @@
             "name": "N0"
         },
         {
-            "t_net": true,
+            "t_net": false,
             "p_net": false,
             "name": "N1"
         },
@@ -21,28 +21,28 @@
             "name": "N2"
         },
         {
-            "t_net": false,
+            "t_net": true,
             "p_net": false,
             "name": "N3"
         },
         {
-            "t_net": false,
+            "t_net": true,
             "p_net": false,
             "name": "N4"
         },
         {
-            "t_net": true,
+            "t_net": false,
             "p_net": false,
             "name": "N5"
         },
         {
-            "t_net": true,
-            "p_net": false,
+            "t_net": false,
+            "p_net": true,
             "name": "N6"
         },
         {
-            "t_net": false,
-            "p_net": true,
+            "t_net": true,
+            "p_net": false,
             "name": "N7"
         },
         {
@@ -56,8 +56,8 @@
             "name": "N9"
         },
         {
-            "t_net": true,
-            "p_net": false,
+            "t_net": false,
+            "p_net": true,
             "name": "N10"
         },
         {
@@ -81,8 +81,8 @@
             "name": "N14"
         },
         {
-            "t_net": false,
-            "p_net": true,
+            "t_net": true,
+            "p_net": false,
             "name": "N15"
         },
         {
@@ -140,272 +140,272 @@
         {
             "source": 0,
             "target": 1,
-            "label": "p7"
+            "label": "(n4)p7"
         },
         {
             "source": 0,
             "target": 2,
-            "label": "t2"
+            "label": "(n5)p1"
         },
         {
             "source": 0,
             "target": 3,
-            "label": "p8"
+            "label": "(n8)p8"
         },
         {
             "source": 0,
             "target": 4,
-            "label": "p2"
+            "label": "(n15)t1"
         },
         {
             "source": 0,
             "target": 5,
-            "label": "p1"
+            "label": "(n10)t2"
         },
         {
             "source": 0,
             "target": 6,
-            "label": "t1"
+            "label": "(n1)p2"
         },
         {
             "source": 1,
             "target": 7,
-            "label": "t1"
+            "label": "(n1)p2"
         },
         {
             "source": 1,
             "target": 8,
-            "label": "p2"
+            "label": "(n10)t2"
         },
         {
             "source": 1,
             "target": 9,
-            "label": "t2"
+            "label": "(n15)t1"
         },
         {
             "source": 1,
             "target": 10,
-            "label": "p1"
+            "label": "(n5)p1"
         },
         {
             "source": 2,
             "target": 11,
-            "label": "p2"
+            "label": "(n8)p8"
         },
         {
             "source": 2,
             "target": 12,
-            "label": "p8"
+            "label": "(n15)t1"
         },
         {
             "source": 2,
-            "target": 9,
-            "label": "p7"
+            "target": 10,
+            "label": "(n4)p7"
         },
         {
             "source": 2,
             "target": 13,
-            "label": "p1"
-        },
-        {
-            "source": 3,
-            "target": 12,
-            "label": "t2"
+            "label": "(n10)t2"
         },
         {
             "source": 3,
             "target": 14,
-            "label": "t1"
+            "label": "(n15)t1"
         },
         {
             "source": 3,
             "target": 15,
-            "label": "p2"
+            "label": "(n1)p2"
+        },
+        {
+            "source": 3,
+            "target": 11,
+            "label": "(n5)p1"
         },
         {
             "source": 3,
             "target": 16,
-            "label": "p1"
+            "label": "(n10)t2"
+        },
+        {
+            "source": 4,
+            "target": 14,
+            "label": "(n8)p8"
+        },
+        {
+            "source": 4,
+            "target": 12,
+            "label": "(n5)p1"
+        },
+        {
+            "source": 4,
+            "target": 9,
+            "label": "(n4)p7"
         },
         {
             "source": 4,
             "target": 17,
-            "label": "t1"
-        },
-        {
-            "source": 4,
-            "target": 8,
-            "label": "p7"
-        },
-        {
-            "source": 4,
-            "target": 15,
-            "label": "p8"
-        },
-        {
-            "source": 4,
-            "target": 11,
-            "label": "t2"
-        },
-        {
-            "source": 5,
-            "target": 18,
-            "label": "t1"
-        },
-        {
-            "source": 5,
-            "target": 16,
-            "label": "p8"
-        },
-        {
-            "source": 5,
-            "target": 10,
-            "label": "p7"
+            "label": "(n1)p2"
         },
         {
             "source": 5,
             "target": 13,
-            "label": "t2"
+            "label": "(n5)p1"
         },
         {
-            "source": 6,
+            "source": 5,
+            "target": 8,
+            "label": "(n4)p7"
+        },
+        {
+            "source": 5,
+            "target": 16,
+            "label": "(n8)p8"
+        },
+        {
+            "source": 5,
             "target": 18,
-            "label": "p1"
+            "label": "(n1)p2"
         },
         {
             "source": 6,
             "target": 7,
-            "label": "p7"
+            "label": "(n4)p7"
         },
         {
             "source": 6,
             "target": 17,
-            "label": "p2"
+            "label": "(n15)t1"
         },
         {
             "source": 6,
-            "target": 14,
-            "label": "p8"
+            "target": 18,
+            "label": "(n10)t2"
+        },
+        {
+            "source": 6,
+            "target": 15,
+            "label": "(n8)p8"
         },
         {
             "source": 7,
             "target": 19,
-            "label": "p1"
+            "label": "(n10)t2"
         },
         {
             "source": 7,
             "target": 20,
-            "label": "p2"
+            "label": "(n15)t1"
         },
         {
             "source": 8,
-            "target": 20,
-            "label": "t1"
+            "target": 19,
+            "label": "(n1)p2"
         },
         {
             "source": 8,
             "target": 21,
-            "label": "t2"
+            "label": "(n5)p1"
+        },
+        {
+            "source": 9,
+            "target": 20,
+            "label": "(n1)p2"
         },
         {
             "source": 9,
             "target": 22,
-            "label": "p1"
+            "label": "(n5)p1"
         },
         {
-            "source": 9,
+            "source": 10,
             "target": 21,
-            "label": "p2"
+            "label": "(n10)t2"
         },
         {
             "source": 10,
             "target": 22,
-            "label": "t2"
-        },
-        {
-            "source": 10,
-            "target": 19,
-            "label": "t1"
+            "label": "(n15)t1"
         },
         {
             "source": 11,
             "target": 23,
-            "label": "p8"
+            "label": "(n10)t2"
         },
         {
             "source": 11,
-            "target": 21,
-            "label": "p7"
-        },
-        {
-            "source": 12,
             "target": 24,
-            "label": "p1"
+            "label": "(n15)t1"
         },
         {
             "source": 12,
-            "target": 23,
-            "label": "p2"
-        },
-        {
-            "source": 13,
             "target": 22,
-            "label": "p7"
+            "label": "(n4)p7"
+        },
+        {
+            "source": 12,
+            "target": 24,
+            "label": "(n8)p8"
         },
         {
             "source": 13,
-            "target": 24,
-            "label": "p8"
+            "target": 21,
+            "label": "(n4)p7"
         },
         {
-            "source": 14,
-            "target": 25,
-            "label": "p2"
-        },
-        {
-            "source": 14,
-            "target": 26,
-            "label": "p1"
-        },
-        {
-            "source": 15,
-            "target": 25,
-            "label": "t1"
-        },
-        {
-            "source": 15,
+            "source": 13,
             "target": 23,
-            "label": "t2"
+            "label": "(n8)p8"
+        },
+        {
+            "source": 14,
+            "target": 25,
+            "label": "(n1)p2"
+        },
+        {
+            "source": 14,
+            "target": 24,
+            "label": "(n5)p1"
+        },
+        {
+            "source": 15,
+            "target": 25,
+            "label": "(n15)t1"
+        },
+        {
+            "source": 15,
+            "target": 26,
+            "label": "(n10)t2"
+        },
+        {
+            "source": 16,
+            "target": 23,
+            "label": "(n5)p1"
         },
         {
             "source": 16,
             "target": 26,
-            "label": "t1"
+            "label": "(n1)p2"
         },
         {
-            "source": 16,
-            "target": 24,
-            "label": "t2"
+            "source": 17,
+            "target": 25,
+            "label": "(n8)p8"
         },
         {
             "source": 17,
             "target": 20,
-            "label": "p7"
-        },
-        {
-            "source": 17,
-            "target": 25,
-            "label": "p8"
+            "label": "(n4)p7"
         },
         {
             "source": 18,
             "target": 26,
-            "label": "p8"
+            "label": "(n8)p8"
         },
         {
             "source": 18,
             "target": 19,
-            "label": "p7"
+            "label": "(n4)p7"
         }
     ]
 }

@@ -1,15 +1,48 @@
-var w = 600;
+var w = 660;
 var h = 600;
-var linkDistance = 100;
+var linkDistance = 120;
 
 var colors = d3.scale.category10();
+const toggleBtns = document.querySelectorAll(".toggle-btns");
+const pnImgs = document.querySelectorAll('.pn-img');
+const pnImgTitles = document.querySelectorAll('.pn-img-title');
+
+const edgeColor = "gray";
+const rootNodeColor = "#BADA55";
+const regularNodeColor = "pink";
+const leafNodeColor = "#4CED";
+
+// const rootNodeColor = "#11B695";
+// const regularNodeColor = "#FFF700";
+// const leafNodeColor = "pink";
+
+toggleBtns.forEach((btn) => { btn.addEventListener('click', switchLock) });
+
+
+function switchLock() {
+    toggleBtns.forEach((btn, ind) => {
+        if (btn.classList.contains('locked-btn')) {
+            btn.classList.remove('locked-btn');
+            btn.innerHTML = '<i class="fas fa-lock-open"></i>';
+            pnImgs[ind].classList.remove('locked');
+            pnImgTitles[ind].classList.remove('locked');
+        } else {
+            btn.classList.add('locked-btn');
+            btn.innerHTML = '<i class="fas fa-lock"></i>';
+            pnImgs[ind].classList.add('locked');
+            pnImgTitles[ind].classList.add('locked');
+        }
+    })
+}
 
 fetch('./DAG/DAG.json').then(response => response.json())
     .then((dataset) => {
 
         var svg = d3.select("body")
             .append("svg")
-            .attr({ "width": w, "height": h })
+            // .attr({ "width": w, "height": h })
+            .attr("preserveAspectRatio", "xMinYMin meet")
+            .attr("viewBox", `0 0 ${w} ${h}`)
         // .call(d3.behavior.zoom().on("zoom", function () {
         //     svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
         // }))
@@ -22,7 +55,7 @@ fetch('./DAG/DAG.json').then(response => response.json())
             .linkDistance([linkDistance])
             .charge([-600])
             .theta(0.1)
-            .gravity(0.1)
+            .gravity(0.06)
             .start();
 
         var edges = svg.selectAll("line")
@@ -31,16 +64,16 @@ fetch('./DAG/DAG.json').then(response => response.json())
             .append("line")
             .attr("id", function (d, i) { return 'edge' + i })
             .attr('marker-end', 'url(#arrowhead)')
-            .style("stroke", "#969696")
+            .style("stroke", edgeColor)
             .style("pointer-events", "none");
 
         function nodeColor(n) {
             if (n.name == 'root') {
-                return "#BADA55";
+                return rootNodeColor;
             } else if (n.t_net && n.p_net) {
-                return "#10ADED";
+                return leafNodeColor;
             } else {
-                return "pink";
+                return regularNodeColor;
             }
         };
 
@@ -88,12 +121,13 @@ fetch('./DAG/DAG.json').then(response => response.json())
 
         // updagte img src upon click
         nodelabels.on("click", (n) => {
-            const pnImg = document.getElementById('pn-img');
-            const pnImgTitle = document.getElementById('pn-img-title');
-            pnImg.src = `./png/${n.name}.png`;
-            pnImgTitle.innerText = n.name;
-            pnImgTitle.style.backgroundColor = nodeColor(n);
-
+            pnImgs.forEach((pnImg, ind) => {
+                if (!pnImg.classList.contains('locked')) {
+                    pnImg.src = `./png/${n.name}.png`;
+                    pnImgTitles[ind].innerText = n.name;
+                    pnImgTitles[ind].style.backgroundColor = nodeColor(n);
+                }
+            });
         });
 
         var edgepaths = svg.selectAll(".edgepath")
@@ -122,7 +156,7 @@ fetch('./DAG/DAG.json').then(response => response.json())
                 'dx': linkDistance / 2,
                 'dy': 10,
                 'font-size': 12,
-                'fill': '#969696'
+                'fill': edgeColor
             });
 
         edgelabels.append('textPath')
@@ -145,65 +179,54 @@ fetch('./DAG/DAG.json').then(response => response.json())
             })
             .append('svg:path')
             .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
-            .attr('fill', '#969696')
-            .attr('stroke', '#969696');
-        // legends
+            .attr('fill', edgeColor)
+            .attr('stroke', edgeColor);
 
+
+        // legends
+        const legendX = 10;
+        const legendYD = 16;
         svg.append("circle")
-            .attr("cx", w * (3 / 4))
-            .attr("cy", h - (h / 12))
+            .attr("cx", legendX)
+            .attr("cy", h - (h / legendYD))
             .attr("r", 6)
             .attr('class', 'legend-dot')
-            .style("fill", '#BADA55');
+            .style("fill", rootNodeColor);
 
         svg.append("text")
-            .attr("x", w * (3 / 4) + 8)
-            .attr("y", h - (h / 12) + 3)
+            .attr("x", legendX + 8)
+            .attr("y", h - (h / legendYD) + 3)
             .text("root (input Petri net)")
             .style("font-size", "14px")
             .attr("alignment-baseline", "middle");
 
         svg.append("circle")
-            .attr("cx", w * (3 / 4))
-            .attr("cy", h - (h / 12) + 20)
+            .attr("cx", legendX)
+            .attr("cy", h - (h / legendYD) + 20)
             .attr("r", 6)
             .attr('class', 'legend-dot')
-            .style("fill", "#10ADED");
+            .style("fill", leafNodeColor);
 
         svg.append("text")
-            .attr("x", w * (3 / 4) + 8)
-            .attr("y", h - (h / 12) + 20 + 3)
+            .attr("x", legendX + 8)
+            .attr("y", h - (h / legendYD) + 20 + 3)
             .text("leaf node (T-net & P-net)")
             .style("font-size", "14px")
             .attr("alignment-baseline", "middle");
 
         svg.append("circle")
-            .attr("cx", w * (3 / 4))
-            .attr("cy", h - (h / 12) + 40)
+            .attr("cx", legendX)
+            .attr("cy", h - (h / legendYD) + 40)
             .attr("r", 6)
             .attr('class', 'legend-dot')
-            .style("fill", "pink");
+            .style("fill", regularNodeColor);
 
         svg.append("text")
-            .attr("x", w * (3 / 4) + 8)
-            .attr("y", h - (h / 12) + 40 + 3)
+            .attr("x", legendX + 8)
+            .attr("y", h - (h / legendYD) + 40 + 3)
             .text("other reduced Petri net")
             .style("font-size", "14px")
             .attr("alignment-baseline", "middle");
-
-        // svg.append("circle")
-        //     .attr("cx", w * (2 / 3))
-        //     .attr("cy", w / 8 + 30)
-        //     .attr("r", 5)
-        //     .attr('class', 'legend-dot')
-        //     .style("fill", '#35a09b');
-
-        // svg.append("text")
-        //     .attr("x", w * (2 / 3) + 10)
-        //     .attr("y", w / 8 + 30)
-        //     .text("No doping allegations")
-        //     .style("font-size", "12px")
-        //     .attr("alignment-baseline", "middle");
 
         force.on("tick", function () {
 

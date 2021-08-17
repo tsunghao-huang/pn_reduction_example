@@ -7,6 +7,14 @@ body {
   display: flex;
   height: 100vh;
   align-items: center;
+  background: rgb(236, 236, 236);
+}
+
+svg {
+  position: relative;
+  width: 50vw;
+  height: 97vh;
+  top: 3vh;
 }
 
 nav {
@@ -21,44 +29,52 @@ nav {
 }
 
 .nav-list {
+  position: fixed;
   display: flex;
   list-style-type: none;
 }
 
 a:link,
 a:visited {
-  background-color: white;
-  color: black;
-  border: 2px solid green;
-  padding: 5px 10px;
+  /* padding: 6px 10px;
+  background: #16a085;
+  border-bottom: 3px solid #117a60;
+  border-radius: 6px;
+  color: white; */
+  color: #11b695;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 15px;
+  margin: 0px 10px;
+  border: none;
+  font-size: 1.2rem;
+  outline: none;
 }
 
 a:hover,
 a:active {
-  background-color: green;
-  color: white;
+  /* color: #149174; */
+  text-shadow: gray 1px 1px;
 }
 
 #pn-panel {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 50vw;
   align-items: center;
-  height: 100vh;
+  height: 97vh;
+  top: 3vh;
 }
 
 figure {
-  max-height: 45%;
-  width: fit-content;
+  height: 45%;
+  margin-bottom: 0px;
 }
 
 figcaption {
   text-align: center;
-  margin: 10px;
+  margin-bottom: 20px;
 }
 
 hr {
@@ -66,12 +82,12 @@ hr {
   color: #ebebeb;
 }
 
-.pn {
+.pn-img {
   width: 100%;
   max-height: 77%;
 }
 
-span {
+.figcap-span {
   background-color: #bada55;
   padding: 8px;
   border-radius: 50%;
@@ -88,4 +104,37 @@ div.tooltip {
   border: 0px;
   border-radius: 8px;
   color: white;
+}
+
+.toggle-btns {
+  position: absolute;
+  right: 36px;
+  top: 10px;
+  width: 36px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background: #11b695;
+  border: none;
+  border-radius: 50%;
+  box-shadow: darkgray 2px 2px;
+  transition: all 0.2s ease;
+  outline: none;
+  color: white;
+  z-index: 6;
+}
+
+.toggle-btns:hover {
+  cursor: pointer;
+}
+
+#toggle-btn2 {
+  position: absolute;
+  top: 50%;
+}
+
+.locked-btn {
+  background: darkgray;
+  box-shadow: none;
 }

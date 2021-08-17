@@ -2,24 +2,12 @@
 <pnml>
   <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
     <page id="n0">
-      <place id="n8">
+      <place id="n5">
         <name>
-          <text>p8</text>
+          <text>p1</text>
         </name>
         <graphics>
-          <position x="70.0" y="50.0"/>
-          <dimension x="10.0" y="10.0"/>
-        </graphics>
-      </place>
-      <place id="n3">
-        <name>
-          <text>p3</text>
-        </name>
-        <initialMarking>
-          <text>1</text>
-        </initialMarking>
-        <graphics>
-          <position x="40.0" y="5.0"/>
+          <position x="10.0" y="10.0"/>
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </place>
@@ -41,6 +29,18 @@
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </place>
+      <place id="n8">
+        <name>
+          <text>p8</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+        <graphics>
+          <position x="70.0" y="50.0"/>
+          <dimension x="10.0" y="10.0"/>
+        </graphics>
+      </place>
       <place id="n1">
         <name>
           <text>p2</text>
@@ -50,69 +50,24 @@
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </place>
-      <place id="n2">
+      <place id="n3">
         <name>
-          <text>p5</text>
-        </name>
-        <graphics>
-          <position x="40.0" y="45.0"/>
-          <dimension x="10.0" y="10.0"/>
-        </graphics>
-      </place>
-      <place id="n7">
-        <name>
-          <text>p6</text>
+          <text>p3</text>
         </name>
         <initialMarking>
           <text>1</text>
         </initialMarking>
         <graphics>
-          <position x="40.0" y="55.0"/>
+          <position x="40.0" y="5.0"/>
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </place>
-      <transition id="n12">
-        <name>
-          <text>t3</text>
-        </name>
-        <graphics>
-          <position x="55.0" y="5.0"/>
-          <dimension x="10.0" y="10.0"/>
-        </graphics>
-      </transition>
       <transition id="n15">
         <name>
           <text>t1</text>
         </name>
         <graphics>
           <position x="25.0" y="10.0"/>
-          <dimension x="10.0" y="10.0"/>
-        </graphics>
-      </transition>
-      <transition id="n13">
-        <name>
-          <text>t5</text>
-        </name>
-        <graphics>
-          <position x="55.0" y="45.0"/>
-          <dimension x="10.0" y="10.0"/>
-        </graphics>
-      </transition>
-      <transition id="n9">
-        <name>
-          <text>t4</text>
-        </name>
-        <graphics>
-          <position x="55.0" y="15.0"/>
-          <dimension x="10.0" y="10.0"/>
-        </graphics>
-      </transition>
-      <transition id="n11">
-        <name>
-          <text>t6</text>
-        </name>
-        <graphics>
-          <position x="55.0" y="55.0"/>
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </transition>
@@ -125,32 +80,36 @@
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </transition>
-      <transition id="n10">
+      <transition id="n9">
         <name>
-          <text>t2</text>
+          <text>t4</text>
         </name>
         <graphics>
-          <position x="25.0" y="50.0"/>
+          <position x="55.0" y="15.0"/>
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </transition>
-      <arc id="140328954954304" source="n13" target="n4"/>
-      <arc id="140328954956320" source="n1" target="n10"/>
-      <arc id="140328954954080" source="n1" target="n15"/>
-      <arc id="140328954955872" source="n15" target="n6"/>
-      <arc id="140328954955648" source="n4" target="n14"/>
-      <arc id="140328954955424" source="n10" target="n2"/>
-      <arc id="140328954956712" source="n7" target="n11"/>
-      <arc id="140328954955592" source="n11" target="n8"/>
-      <arc id="140328954956488" source="n2" target="n13"/>
-      <arc id="140328954956040" source="n3" target="n12"/>
-      <arc id="140328954955368" source="n14" target="n1"/>
-      <arc id="140328954956264" source="n12" target="n4"/>
-      <arc id="140328954955480" source="n15" target="n3"/>
-      <arc id="140328954954640" source="n8" target="n14"/>
-      <arc id="140328954955536" source="n6" target="n9"/>
-      <arc id="140328954956600" source="n10" target="n7"/>
-      <arc id="140328954955704" source="n9" target="n8"/>
+      <transition id="n12">
+        <name>
+          <text>t3</text>
+        </name>
+        <graphics>
+          <position x="55.0" y="5.0"/>
+          <dimension x="10.0" y="10.0"/>
+        </graphics>
+      </transition>
+      <arc id="140352224562592" source="n6" target="n9"/>
+      <arc id="140352224559232" source="n15" target="n3"/>
+      <arc id="140352224561696" source="n8" target="n14"/>
+      <arc id="140352224561920" source="n5" target="n15"/>
+      <arc id="140352224560520" source="n14" target="n5"/>
+      <arc id="140352224562088" source="n15" target="n6"/>
+      <arc id="140352224562872" source="n1" target="n15"/>
+      <arc id="140352224560240" source="n9" target="n8"/>
+      <arc id="140352224563152" source="n4" target="n14"/>
+      <arc id="140352224561976" source="n14" target="n1"/>
+      <arc id="140352224560912" source="n12" target="n4"/>
+      <arc id="140352224561752" source="n3" target="n12"/>
     </page>
   </net>
 </pnml>

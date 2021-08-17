@@ -1,22 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Force Layout with labels on edges</title>
-    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src='script.js'></script>
-    <style type="text/css">
-    </style>
-</head>
-
-<body>
-    <div id='pn-panel'>
-        <img src="png/root.png" alt="petri net" width="600" height="500">
-    </div>
-
-</body> -->
-
 </html>
 
 <!DOCTYPE html>
@@ -25,43 +6,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
-    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-
     <link rel="stylesheet" href="./style.css">
-    <!-- <link rel="icon" href="./favicon.ico"> -->
-    <title>PN_reduction</title>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="icon" href="./favicon.ico">
+    <title>Petri net Reduction</title>
 
 </head>
 
 <body>
-    <!-- <nav id="navbar">
-        <ul class="nav-list">
-            <li>
-                <a href="/">
-                    <i class="fa fa-home"></i> Reduce Another Net
-                </a>
-            </li>
-            <li>
-                <a href="/download">
-                    <i class="fab fa-github"></i> Download Results
-                </a>
-            </li>
-        </ul>
-    </nav> -->
     <div id='pn-panel'>
+        <button type="button" id="toggle-btn1" class="toggle-btns locked-btn">
+            <i class="fas fa-lock"></i>
+        </button>
+        <button type="button" id="toggle-btn2" class="toggle-btns">
+            <i class="fas fa-lock-open"></i>
+        </button>
         <figure>
             <figcaption>
-                <span id="pn-img-root-title">root</span>
+                <span class="pn-img-title figcap-span locked">root</span>
             </figcaption>
-            <img src="./png/root.png" alt="petri net" id="pn-img-root" class="pn">
+            <img src="./png/root.png" alt="petri net" class="pn-img locked">
         </figure>
         <hr>
         <figure>
             <figcaption>
-                <span id="pn-img-title">root</span>
+                <span class="pn-img-title figcap-span">root</span>
             </figcaption>
-            <img src="./png/root.png" alt="petri net" id="pn-img" class="pn">
+            <img src="./png/root.png" alt="petri net" class="pn-img">
         </figure>
     </div>
 

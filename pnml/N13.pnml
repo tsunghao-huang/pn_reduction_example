@@ -2,15 +2,6 @@
 <pnml>
   <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
     <page id="n0">
-      <place id="n1">
-        <name>
-          <text>p2</text>
-        </name>
-        <graphics>
-          <position x="10.0" y="50.0"/>
-          <dimension x="10.0" y="10.0"/>
-        </graphics>
-      </place>
       <place id="n4">
         <name>
           <text>p7</text>
@@ -41,21 +32,30 @@
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </place>
-      <transition id="n10">
+      <place id="n1">
         <name>
-          <text>t2</text>
+          <text>p2</text>
         </name>
         <graphics>
-          <position x="25.0" y="50.0"/>
+          <position x="10.0" y="50.0"/>
           <dimension x="10.0" y="10.0"/>
         </graphics>
-      </transition>
+      </place>
       <transition id="n13">
         <name>
           <text>t5</text>
         </name>
         <graphics>
           <position x="55.0" y="45.0"/>
+          <dimension x="10.0" y="10.0"/>
+        </graphics>
+      </transition>
+      <transition id="n10">
+        <name>
+          <text>t2</text>
+        </name>
+        <graphics>
+          <position x="25.0" y="50.0"/>
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </transition>
@@ -68,14 +68,14 @@
           <dimension x="10.0" y="10.0"/>
         </graphics>
       </transition>
-      <arc id="140328955213696" source="n10" target="n2"/>
-      <arc id="140328955211904" source="n2" target="n13"/>
-      <arc id="140328955212520" source="n14" target="n1"/>
-      <arc id="140328955213808" source="n14" target="n5"/>
-      <arc id="140328955212016" source="n1" target="n10"/>
-      <arc id="140328955212912" source="n13" target="n4"/>
-      <arc id="140328955212688" source="n4" target="n14"/>
-      <arc id="140328955213528" source="n5" target="n10"/>
+      <arc id="140352226150944" source="n4" target="n14"/>
+      <arc id="140352226151168" source="n14" target="n5"/>
+      <arc id="140352226150776" source="n1" target="n10"/>
+      <arc id="140352226150888" source="n5" target="n10"/>
+      <arc id="140352226151112" source="n2" target="n13"/>
+      <arc id="140352226150832" source="n10" target="n2"/>
+      <arc id="140352226151056" source="n14" target="n1"/>
+      <arc id="140352226151000" source="n13" target="n4"/>
     </page>
   </net>
 </pnml>
